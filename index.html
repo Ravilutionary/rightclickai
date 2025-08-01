@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This is the "brain" of our page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The Title for the browser tab and search engines -->
+    <title>Right Click AI: AI-Powered Growth for Ambitious Entrepreneurs</title>
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Right Click AI offers AI-powered growth strategies for ambitious entrepreneurs. Future-proof your business with our human-led, AI-optimized solutions for attracting ideal customers and achieving measurable growth.">
+
+    <!-- Getting our brand fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload critical fonts for better performance and to prevent FOUT -->
+    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&f[]=karla@400&display=swap" as="style">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&f[]=karla@400&display=swap" rel="stylesheet" crossorigin>
+
+    <!-- Schema.org Structured Data for FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this just another trend that will fade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This is a fundamental shift in how people find information, not a fleeting trend. We're here to help you build for the next decade, not the next six months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI going to replace the human, creative side of my brand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely not. We use AI as our sharpest research tool, not a replacement for a brain. The strategy, the creativity, and the final decisions are always 100% human, guided by our expertise and your unique vision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this too expensive or complex for my small business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our entire model is built for you. We focus on the lean, high-impact actions that drive results without needing an enterprise-level budget. We believe in providing immense value first, which is why we start with a free audit."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- This is our CSS for styling the page -->
+    <style>
+        /* This is a CSS comment */
+
+        /* --- Global Styles & Variables --- */
+        :root {
+            --steward-blue: #0A2540;
+            --cloud-white: #F6F9FC;
+            --click-green: #33FF99;
+            --soft-dark-grey: #333;
+            --white: #fff;
+        }
+
+        /* Add smooth scrolling behavior to the whole page */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--cloud-white);
+            font-family: 'Karla', sans-serif; /* New body font */
+            color: var(--soft-dark-grey);
+            margin: 0;
+            font-size: 16px; /* Base font size */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Satoshi', sans-serif; /* New headline font */
+            color: var(--steward-blue);
+        }
+
+        /* --- Accessibility: Focus Styles --- */
+        a:focus,
+        button:focus,
+        input:focus {
+            outline: 3px solid var(--click-green);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        a:focus:not(:focus-visible),
+        button:focus:not(:focus-visible),
+        input:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        /* --- Accessibility: Skip Link Styles --- */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--steward-blue);
+            color: var(--white);
+            padding: 8px 12px;
+            text-decoration: none;
+            z-index: 9999;
+            transition: top 0.3s ease-in-out;
+        }
+
+        .skip-link:focus {
+            top: 0;
+            outline: 3px solid var(--click-green);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* --- Accessibility: Reduced Motion Preference --- */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            .cta-button,
+            .hero-button,
+            .skip-link,
+            .faq-answer,
+            .faq-toggle,
+            .form-submit-button,
+            .word-list,
+            .comparison-accordion-answer,
+            .comparison-accordion-toggle {
+                transition-duration: 0s !important;
+                animation-duration: 0s !important;
+            }
+        }
+
+        /* --- Header Styles --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: var(--white);
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+            color: var(--steward-blue);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--click-green);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--soft-dark-grey);
+            font-weight: 700;
+            font-family: 'Satoshi', sans-serif;
+        }
+        
+        nav a:hover {
+            color: var(--steward-blue);
+        }
+
+        .cta-button {
+            background-color: var(--click-green);
+            color: var(--steward-blue);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 900;
+            font-family: 'Satoshi', sans-serif;
+            white-space: nowrap;
+            font-size: 16px; 
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- Hero Section Styles --- */
+        .hero {
+            padding: 100px 5% 60px;
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 68px; 
+            font-weight: 900;
+            margin-top: 0;
+            margin-bottom: 32px;
+            line-height: 1.2;
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: baseline;
+            justify-content: center;
+        }
+        
+        .hero p {
+            font-size: 26px; 
+            line-height: 1.6;
+            color: #555;
+            margin: 0 auto 48px auto;
+            max-width: 600px;
+            font-weight: 400; 
+        }
+        
+        /* --- Hero Visual Section --- */
+        .hero-visual {
+            padding: 0 5% 80px;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            max-height: 600px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        /* --- Animated Headline Scroller Styles --- */
+        .word-scroller {
+            height: 1.2em;
+            overflow: hidden;
+            margin-left: 15px;
+        }
+
+        .word-list {
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.6s ease-in-out; 
+        }
+
+        .word-list div {
+            padding-bottom: 0.2em;
+        }
+
+        /* --- Brand Color Classes --- */
+        .gemini-color { color: #4285F4; }
+        .chatgpt-color { color: #10A37F; }
+        .claude-color { color: #D97A53; }
+        .copilot-color { color: #6E5494; }
+        .perplexity-color { color: #17B897; }
+        .dalle-color { color: #9A3EFE; }
+        .midjourney-color { color: #CCCCCC; }
+
+        .hero-cta-group {
+            text-align: center; 
+            margin-top: 24px;
+        }
+
+        .hero-button {
+            background-color: var(--steward-blue);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 26px;
+            font-family: 'Satoshi', sans-serif;
+            display: inline-block;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .hero-button:hover {
+             transform: scale(1.05);
+        }
+
+        .hero-cta-group .friction-remover {
+            font-size: 12px; 
+            color: #777; 
+            margin-top: 16px;
+            font-weight: 400; 
+            display: block; 
+            max-width: 250px; 
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center; 
+        }
+        
+        /* --- Problem/Agitate Section Styles --- */
+        .problem-agitate {
+            background-color: var(--cloud-white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .problem-agitate h2 {
+            font-size: 42px; 
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+        
+        .problem-agitate p {
+            font-size: 26px;
+            line-height: 1.6;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- Features Section Styles --- */
+        .features {
+            background-color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 48px;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap; 
+        }
+
+        .feature-card {
+            max-width: 320px;
+            background-color: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            height: 60px;
+            width: 60px;
+            margin-bottom: 24px;
+            color: var(--steward-blue);
+        }
+
+        .feature-card h3 {
+            font-size: 26px; 
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 16px; 
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        /* --- Social Proof Section Styles --- */
+        .social-proof {
+            background-color: var(--steward-blue);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .social-proof h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 48px;
+            color: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .testimonial-card {
+            max-width: 320px;
+            background-color: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .testimonial-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            margin-top: 20px; 
+        }
+        
+        .testimonial-quote {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            font-style: italic;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            font-family: 'Satoshi', sans-serif;
+        }
+        
+        .testimonial-author span {
+            display: block;
+            font-weight: 400;
+            font-family: 'Karla', sans-serif;
+            color: #777;
+            font-style: normal;
+        }
+
+        /* --- Method Section Styles --- */
+        .method {
+            background-color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .method h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 48px;
+        }
+        
+        .method-steps {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .method-step {
+            max-width: 280px;
+            position: relative;
+        }
+        
+        .step-number {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--click-green);
+            background-color: var(--steward-blue);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto 16px;
+        }
+        
+        .method-step h3 {
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+        
+        .method-step p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .step-arrow {
+            position: absolute;
+            top: 20px;
+            right: -45px;
+            font-size: 40px;
+            color: var(--steward-blue);
+        }
+        
+        /* --- Comparison Section Styles --- */
+        .comparison {
+            background-color: var(--cloud-white);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .comparison h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 48px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .comparison-table caption {
+            padding-bottom: 24px;
+            color: #555;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table th {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 26px;
+        }
+        
+        .comparison-table td:first-child {
+            text-align: left;
+            font-weight: 700;
+        }
+        
+        .tick {
+            color: #28a745; 
+            font-weight: 900;
+            font-size: 24px;
+        }
+        
+        .cross {
+            color: #dc3545; 
+            font-weight: 900;
+            font-size: 24px;
+        }
+        
+        .rcai-column {
+            background-color: rgba(51, 255, 153, 0.1);
+        }
+
+        /* --- Comparison Accordion Styles (Mobile) --- */
+        .comparison-accordion {
+            display: none; /* Hidden by default on desktop */
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .comparison-accordion-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .comparison-accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-accordion-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 24px;
+            font-size: 20px;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 700;
+            color: var(--steward-blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .comparison-accordion-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 24px;
+        }
+        
+        .comparison-accordion-item.active .comparison-accordion-answer {
+            padding-bottom: 24px;
+        }
+        
+        .comparison-accordion-answer-item {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #eee;
+        }
+        .comparison-accordion-answer-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .comparison-accordion-answer-item strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--soft-dark-grey);
+            font-family: 'Satoshi', sans-serif;
+        }
+
+        .rcai-highlight {
+            background-color: rgba(51, 255, 153, 0.1);
+            border-color: rgba(51, 255, 153, 0.3);
+        }
+        
+        .comparison-accordion-toggle {
+            transition: transform 0.3s ease-out;
+            color: var(--click-green);
+        }
+
+        .comparison-accordion-item.active .comparison-accordion-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* --- Brand Story Section Styles --- */
+        .brand-story {
+            padding: 80px 5%;
+            background-color: var(--white);
+        }
+
+        .story-container {
+            max-width: 800px; 
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .story-content h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+
+        .story-content p {
+            font-size: 18px; 
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        /* --- FAQ Section Styles --- */
+        .faq {
+            background-color: var(--cloud-white);
+            padding: 80px 5%;
+        }
+
+        .faq h2 {
+            font-size: 42px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 24px;
+            font-size: 20px;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 700;
+            color: var(--steward-blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            line-height: 1.8;
+            color: #444;
+            padding: 0 24px; 
+        }
+        
+        .faq-item.active .faq-answer {
+            padding-bottom: 24px;
+        }
+
+        .faq-toggle {
+            transition: transform 0.3s ease-out;
+            color: var(--click-green);
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        /* --- Final CTA Section / Contact Form Styles --- */
+        .final-cta {
+            background-color: var(--steward-blue);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            color: var(--white);
+            font-weight: 900;
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+        
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: var(--white);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--steward-blue);
+            font-family: 'Karla', sans-serif;
+            font-size: 16px;
+            box-sizing: border-box; 
+        }
+        
+        .form-submit-button {
+            width: 100%;
+            background-color: var(--click-green);
+            color: var(--steward-blue);
+            padding: 16px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 900;
+            font-size: 26px;
+            font-family: 'Satoshi', sans-serif;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .form-submit-button:hover {
+            transform: scale(1.02);
+        }
+        
+        #form-message {
+            margin-top: 20px;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        /* --- Footer Styles --- */
+        footer {
+            background-color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+        }
+        
+        /* --- Responsive styles for smaller screens --- */
+        @media (max-width: 900px) {
+            .step-arrow {
+                display: none; 
+            }
+        }
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+            .hero h1 {
+                font-size: 42px;
+            }
+            .hero p {
+                font-size: 20px;
+            }
+            header {
+                position: static; 
+            }
+            h2 {
+                font-size: 36px;
+            }
+            
+            .comparison-table {
+                display: none;
+            }
+            .comparison-accordion {
+                display: block;
+            }
+        }
+        @media (max-width: 600px) {
+            header nav {
+                display: none; 
+            }
+        }
+
+    </style>
+</head>
+<body id="top">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <a href="#top" class="logo">Right Click AI<span>✓</span></a>
+        <nav>
+            <ul>
+                <li><a href="#features">Services</a></li>
+                <li><a href="#method">Our Method</a></li>
+                <li><a href="#compare">Compare</a></li>
+                <li><a href="#story">Our Truth</a></li>
+                <li><li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class="cta-button">Get Your Free Audit</a>
+    </header>
+
+    <main id="main-content"> <!-- Added id for skip link target -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>
+                    <span>Your customers are no longer searching. They're prompting</span>
+                    <div class="word-scroller">
+                        <div class="word-list">
+                            <!-- This will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </h1>
+                <p>Future-proof your business in the age of AI. We help ambitious entrepreneurs attract ideal customers and achieve measurable growth.</p>
+                <div class="hero-cta-group">
+                    <a href="#features" class="hero-button">Get My Free AI Audit</a>
+                    <p class="friction-remover">No commitment. 100% free analysis.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hero Visual Section -->
+        <section class="hero-visual">
+            <div class="hero-image">
+                 <img src="https://imghost.online/ib/JYmM7Hwnk4rzoNM_1754008303.webp" alt="Abstract digital art representing an AI neural network." onerror="this.onerror=null;this.src='https://placehold.co/1200x600/eeeeee/333333?text=Image+Not+Found';">
+            </div>
+        </section>
+
+        <section class="problem-agitate">
+            <h2>Feeling Left Behind by the AI Boom?</h2>
+            <p>The rise of AI has created a wave of confusion, hype, and fear for entrepreneurs. It feels like an exclusive club, leaving you overwhelmed and worried about being outpaced.</p>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Your AI-Powered Growth System</h2>
+            <div class="features-grid">
+                <!-- Feature Cards -->
+                <div class="feature-card">
+                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>                      
+                    <h3>Attract Your Ideal Customers</h3>
+                    <p>We optimize your digital presence so you show up exactly when your dream customers are looking for unique products and services like yours.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m-16.5 0L6 6.75M6 16.5v-11.25m0 0L8.25 9.75M12 16.5h6.75m-6.75 0L9.75 9.75M18.75 3h1.5m-1.5 0h-16.5m16.5 0L18 6.75m0 9.75v-11.25m0 0L15.75 9.75" /></svg>                      
+                    <h3>Future-Proof Your Business</h3>
+                    <p>We build a long-term, defensible "AI Moat" around your brand, so you can stop chasing trends and focus on sustainable growth.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25M21 12l-3.75 2.25" /></svg>                      
+                    <h3>See Your Tangible Growth</h3>
+                    <p>No confusing jargon. Just clear, transparent reporting that shows you exactly how our partnership is driving real, measurable business growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-proof">
+            <h2>Proof, Not Promises</h2>
+            <div class="testimonials-grid">
+                <!-- Testimonials -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Working with Right Click AI was a game-changer. They didn't just talk about results, they delivered. Our online inquiries have more than doubled in three months."</p>
+                    <img src="https://imghost.online/ib/pezLX0z7zXZveG3_1753827326.webp" alt="Headshot of Sarah L." class="testimonial-photo" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F6F9FC/0A2540?text=SL';">
+                    <p class="testimonial-author">Sarah L.<span>Founder, Artisan Jewelry Co.</span></p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Finally, an AI partner who speaks plain English. They demystified the entire process and gave us a clear path to growth. I feel back in control of my business."</p>
+                    <img src="https://imghost.online/ib/XZbEX8S6EzXXxFM_1753826813.webp" alt="Headshot of Mark R." class="testimonial-photo" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F6F9FC/0A2540?text=MR';">
+                    <p class="testimonial-author">Mark R.<span>Owner, The Modern Carpenter</span></p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The 'AI Moat' they built for us is real. We're not just getting more traffic, we're getting the *right* traffic. These are customers who are ready to buy."</p>
+                    <img src="https://imghost.online/ib/hFQj7b7NCVhLZLv_1753829219.webp" alt="Headshot of Emily Chen" class="testimonial-photo" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F6F9FC/0A2540?text=EC';">
+                    <p class="testimonial-author">Emily Chen<span>Director, Custom Ceramics</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="method" class="method">
+            <h2>The AI Moat Method: Your Path to Growth</h2>
+            <div class="method-steps">
+                <!-- Steps -->
+                <div class="method-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery & Audit</h3>
+                    <p>We start by deeply understanding your business and customers, then perform a data-driven audit to uncover your biggest growth opportunities.</p>
+                    <div class="step-arrow">→</div>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">2</div>
+                    <h3>Build & Optimize</h3>
+                    <p>We execute a clear plan, building the systems and AI-optimized content that will attract your ideal customers and establish your authority.</p>
+                    <div class="step-arrow">→</div>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">3</div>
+                    <h3>Measure & Scale</h3>
+                    <p>We provide clear, jargon-free reports showing your growth, and work with you to scale your success and stay ahead of the curve.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="compare" class="comparison">
+            <h2>The Right Choice for Your Business</h2>
+            <table class="comparison-table">
+                <caption>Comparison of Right Click AI vs. Other Approaches</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Feature</th>
+                        <th scope="col">Right Click AI</th>
+                        <th scope="col">Traditional SEO</th>
+                        <th scope="col">The DIY Approach</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Feature">Core Focus</td>
+                        <td data-label="Right Click AI" class="rcai-column">Future-Proofing with AI</td>
+                        <td data-label="Traditional SEO">Outdated Keyword Tactics</td>
+                        <td data-label="The DIY Approach">Overwhelming & Time-Consuming</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Strategy">Strategy</td>
+                        <td data-label="Right Click AI" class="rcai-column">Human-led, AI-powered</td>
+                        <td data-label="Traditional SEO">Manual & Slow</td>
+                        <td data-label="The DIY Approach">Guesswork & Chasing Trends</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Reporting">Reporting</td>
+                        <td data-label="Right Click AI" class="rcai-column">Clear & Transparent ROI</td>
+                        <td data-label="Traditional SEO">Confusing Jargon</td>
+                        <td data-label="The DIY Approach">No Clear Data</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Best For">Best For</td>
+                        <td data-label="Right Click AI" class="rcai-column">Ambitious entrepreneurs who want sustainable growth.</td>
+                        <td data-label="Traditional SEO">Large corporations with big, slow-moving budgets.</td>
+                        <td data-label="The DIY Approach">Hobbyists with more time than money.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Container for the mobile accordion -->
+            <div class="comparison-accordion"></div>
+        </section>
+
+        <section id="story" class="brand-story">
+            <div class="story-container">
+                <div class="story-content">
+                    <h2>Our Core Truth: Human Stewardship, Powered by AI</h2>
+                    <p>The rise of AI created a historic opportunity, but it also unleashed a wave of confusion, hype, and fear, leaving most entrepreneurs feeling left behind. We felt compelled to bridge this gap.</p>
+                    <p>We fundamentally believe AI is not a magic wand; it's a powerful tool. The best results don't come from the tool itself, but from the expert, trustworthy hand that wields it. Our conviction is that human strategy, powered by scientific principles, is what transforms raw AI potential into predictable business growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <h2>Your Questions, Answered</h2>
+            <div class="faq-container">
+                <!-- FAQ Items -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">Is this just another trend that will fade?<span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+                    <div class="faq-answer" id="faq-answer-1"><p>This is a fundamental shift in how people find information, not a fleeting trend. We're here to help you build for the next decade, not the next six months.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">Is AI going to replace the human, creative side of my brand?<span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+                    <div class="faq-answer" id="faq-answer-2"><p>Absolutely not. We use AI as our sharpest research tool, not a replacement for a brain. The strategy, the creativity, and the final decisions are always 100% human, guided by our expertise and your unique vision.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">Is this too expensive or complex for my small business?<span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+                    <div class="faq-answer" id="faq-answer-3"><p>Our entire model is built for you. We focus on the lean, high-impact actions that drive results without needing an enterprise-level budget. We believe in providing immense value first, which is why we start with a free audit.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="final-cta">
+            <h2>Ready to Build Your AI Moat?</h2>
+            <form class="contact-form" id="audit-form" name="audit" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="audit" />
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="website">Your Website URL</label>
+                    <input type="url" id="website" name="website" required autocomplete="url">
+                </div>
+                <button type="submit" class="form-submit-button">Request My Free Audit</button>
+            </form>
+            <div id="form-message"></div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Right Click AI. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Our JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Animated Headline Scroller Script ---
+            const agents = [
+                { name: 'Gemini', className: 'gemini-color' },
+                { name: 'ChatGPT', className: 'chatgpt-color' },
+                { name: 'Claude', className: 'claude-color' },
+                { name: 'Copilot', className: 'copilot-color' },
+                { name: 'Perplexity', className: 'perplexity-color' },
+                { name: 'DALL·E 3', className: 'dalle-color' },
+                { name: 'Midjourney', className: 'midjourney-color' }
+            ];
+            const wordList = document.querySelector('.word-list');
+            const scroller = document.querySelector('.word-scroller');
+            if (wordList && scroller) {
+                agents.forEach(agent => {
+                    const div = document.createElement('div');
+                    div.textContent = agent.name + '.';
+                    wordList.appendChild(div);
+                });
+                let currentIndex = 0;
+                let wordHeight = 0; 
+                function calculateWordHeight() {
+                    if (wordList.children.length > 0) {
+                        wordHeight = wordList.children[0].clientHeight;
+                    }
+                }
+                calculateWordHeight();
+                window.addEventListener('resize', calculateWordHeight);
+                scroller.classList.add(agents[currentIndex].className);
+                setInterval(() => {
+                    let newIndex;
+                    do {
+                        newIndex = Math.floor(Math.random() * agents.length);
+                    } while (newIndex === currentIndex);
+                    const newTransformValue = `translateY(-${newIndex * wordHeight}px)`;
+                    wordList.style.transform = newTransformValue;
+                    scroller.classList.remove(agents[currentIndex].className);
+                    scroller.classList.add(agents[newIndex].className);
+                    currentIndex = newIndex;
+                }, 2500);
+            }
+
+            // --- FAQ Accordion Script ---
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.toggle('active');
+                    question.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+                    if (isActive) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = '0';
+                    }
+                });
+            });
+
+            // --- Comparison Accordion Script ---
+            const comparisonData = [
+                {
+                    feature: 'Core Focus',
+                    rcai: 'Future-Proofing with AI',
+                    seo: 'Outdated Keyword Tactics',
+                    diy: 'Overwhelming & Time-Consuming'
+                },
+                {
+                    feature: 'Strategy',
+                    rcai: 'Human-led, AI-powered',
+                    seo: 'Manual & Slow',
+                    diy: 'Guesswork & Chasing Trends'
+                },
+                {
+                    feature: 'Reporting',
+                    rcai: 'Clear & Transparent ROI',
+                    seo: 'Confusing Jargon',
+                    diy: 'No Clear Data'
+                },
+                {
+                    feature: 'Best For',
+                    rcai: 'Ambitious entrepreneurs who want sustainable growth.',
+                    seo: 'Large corporations with big, slow-moving budgets.',
+                    diy: 'Hobbyists with more time than money.'
+                }
+            ];
+
+            const accordionContainer = document.querySelector('.comparison-accordion');
+            if (accordionContainer) {
+                comparisonData.forEach((data, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'comparison-accordion-item';
+                    item.innerHTML = `
+                        <button class="comparison-accordion-question" aria-expanded="false" aria-controls="comp-answer-${index}">
+                            ${data.feature}
+                            <span class="comparison-accordion-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+                        </button>
+                        <div class="comparison-accordion-answer" id="comp-answer-${index}">
+                            <div class="comparison-accordion-answer-item rcai-highlight">
+                                <strong>Right Click AI</strong>
+                                <span>${data.rcai}</span>
+                            </div>
+                            <div class="comparison-accordion-answer-item">
+                                <strong>Traditional SEO</strong>
+                                <span>${data.seo}</span>
+                            </div>
+                            <div class="comparison-accordion-answer-item">
+                                <strong>The DIY Approach</strong>
+                                <span>${data.diy}</span>
+                            </div>
+                        </div>
+                    `;
+                    accordionContainer.appendChild(item);
+                });
+
+                accordionContainer.addEventListener('click', (e) => {
+                    const questionButton = e.target.closest('.comparison-accordion-question');
+                    if (!questionButton) return;
+
+                    const clickedItem = questionButton.parentElement;
+                    const allItems = accordionContainer.querySelectorAll('.comparison-accordion-item');
+                    const wasActive = clickedItem.classList.contains('active');
+
+                    allItems.forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('.comparison-accordion-answer').style.maxHeight = '0';
+                        item.querySelector('.comparison-accordion-question').setAttribute('aria-expanded', 'false');
+                    });
+
+                    if (!wasActive) {
+                        clickedItem.classList.add('active');
+                        const answer = clickedItem.querySelector('.comparison-accordion-answer');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        questionButton.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+
+            // --- Contact Form Script ---
+            const form = document.getElementById('audit-form');
+            const formMessage = document.getElementById('form-message');
+            if (form) {
+                // MODIFIED: Replaced with asynchronous fetch logic for Netlify
+                form.addEventListener('submit', event => {
+                    event.preventDefault();
+
+                    const formData = new FormData(form);
+                    
+                    fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString()
+                    })
+                    .then(() => {
+                        // This code runs on a successful submission
+                        if (formMessage) {
+                           formMessage.textContent = "Thank you! We've received your request and will be in touch shortly.";
+                        }
+                        form.reset();
+                    })
+                    .catch(error => {
+                        // This code runs if there's an error
+                        if (formMessage) {
+                            formMessage.textContent = "Sorry, there was an error submitting your form. Please try again.";
+                        }
+                        console.error(error);
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+
